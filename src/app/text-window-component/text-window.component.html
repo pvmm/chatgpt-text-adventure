@@ -1,0 +1,22 @@
+<div id="paintPanel" class="window-widget window-widget-m">
+    <div class="window-titlebar">
+        <span class="icon icon-paint"></span>
+
+        <span class="window-title" title="main window" onmousedown="grabCard(event);">
+            <span class="main-window-name">text adventure console</span>
+        </span>
+
+        <button title="show about page for paint" onclick="showAbout('./tools/paint', 'paintPanel');">
+            <span class="icon icon-help"></span>
+        </button>
+
+        <button title="minimize paint window" class="close-button" onclick="hidePanel('paintPanel');">
+            <span class="icon icon-close"></span>
+        </button>
+    </div>
+
+    <div class="window-main">
+        <div id="chatgpt-response"><p>Hello, world!<br/>Bla bla bla</p></div>
+        <input title="user input" type="text" id="userInput" class="textInputField" onchange="on_drawing_name_change();">
+    </div>
+</div>

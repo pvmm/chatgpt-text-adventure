@@ -1,0 +1,164 @@
+body { 
+    margin: 0;
+    padding: 0;
+    width: 100%; 
+    height: 100%;
+}
+
+/* remove browser default styles */
+button, input[type=text], input[type=radio], input[type=checkmark] {
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    background: inherit;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+}
+
+/* page */
+html {
+    font-size: 100%;
+    line-height: 100%;
+    width: 100%;
+    height: 100%;
+    background: var(--bitsy-color-accent-2);
+    color: var(--bitsy-color-main-2);
+    overscroll-behavior: none;
+    scrollbar-color: var(--bitsy-color-main-2) var(--bitsy-color-accent-1);
+}
+    
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* canvas */
+canvas {
+    width: 100%;
+    margin-bottom: var(--bitsy-space-s);
+}
+
+/* button */
+button {
+    background: var(--bitsy-color-accent-1);
+    padding: var(--bitsy-space-s);
+    margin: var(--bitsy-space-xs);
+    border-radius: var(--bitsy-space-s);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:active {
+    background: var(--bitsy-color-main-2);
+    color: var(--bitsy-color-main-1);
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+
+/* label */
+label {
+    font-family: "monocraft, medium";
+    padding: var(--bitsy-space-s);
+    margin: var(--bitsy-space-xs);
+    border-radius: var(--bitsy-space-s);
+    display: inline-flex;
+    align-items: center;
+}
+
+/* textarea */
+textarea {
+    font-family: monospace;
+    font-size: 100%;
+}
+
+.window-widget {
+	background: var(--bitsy-color-main-1);
+	margin: var(--bitsy-space-m);
+	margin-right: 0;
+	display: inline-flex;
+	flex-direction: column;
+	max-height: calc(100% - (3 * var(--bitsy-space-m)));
+	border-radius: var(--bitsy-space-s);
+	border-bottom: solid var(--bitsy-space-xs) var(--bitsy-color-main-2);
+}
+
+/*
+    //bitsy-card = window-widget
+    //bitsy-card-m = window-widget-m
+    //bitsy-card-m = workbench-item
+    //bitsy-card-titlebar = window-titlebar
+    //bitsy-card-title = window-title
+    //paint_tool_name = main-window-name
+    //bitsy-card-close-button = close-button
+    //bitsy_icon = txtadv_icon
+    //bitsy-card-main = window-main
+    **
+    chatgpt-response
+*/
+
+.icon-help {
+    background-image: url(/assets/icons/help.svg);
+}
+
+.icon-close {
+    background-image: url(/assets/icons/close.svg);
+}
+
+/* this is a one-off hack to better align the close button's icon with the help button's icon */
+.close-button .txtadv_icon {
+	transform: translateY(1px);
+}
+
+/* icons */
+.icon {
+    width: 1em;
+    height: 1em;
+    /* filter processed in https://codepen.io/sosuke/pen/Pjoqqp for color --bitsy-color-main-2 */
+    filter: invert(45%) sepia(9%) saturate(2919%) hue-rotate(202deg) brightness(88%) contrast(83%);
+}
+
+// // bitsyEditorStyle.css
+// .icon svg {
+// 	width: 1em;
+// 	height: 1em;
+// 	fill: currentColor;
+// }
+
+.bitsy-card-xs .window-main {
+    width: var(--bitsy-size-xs);
+}
+
+.window-widget-m .window-main {
+    width: var(--bitsy-size-xl);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.window-titlebar {
+	display: flex;
+	padding: var(--bitsy-space-s);
+	background: var(--bitsy-color-accent-1);
+	border-radius: var(--bitsy-space-s) var(--bitsy-space-s) 0 0;
+	align-items: center;
+}
+
+.window-title {
+	flex-grow: 1;
+	margin-left: var(--bitsy-space-m);
+	user-select: none;
+}
+
+.bitsy-menu-label .txtadv_icon {
+	margin-right: var(--bitsy-space-s);
+}
