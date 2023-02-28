@@ -110,27 +110,6 @@ textarea {
     chatgpt-response
 */
 
-.icon-help {
-    background-image: url(/assets/icons/help.svg);
-}
-
-.icon-close {
-    background-image: url(/assets/icons/close.svg);
-}
-
-/* this is a one-off hack to better align the close button's icon with the help button's icon */
-.close-button .txtadv_icon {
-	transform: translateY(1px);
-}
-
-/* icons */
-.icon {
-    width: 1em;
-    height: 1em;
-    /* filter processed in https://codepen.io/sosuke/pen/Pjoqqp for color --bitsy-color-main-2 */
-    filter: invert(45%) sepia(9%) saturate(2919%) hue-rotate(202deg) brightness(88%) contrast(83%);
-}
-
 .bitsy-card-xs .window-main {
     width: var(--bitsy-size-xs);
 }
@@ -138,8 +117,11 @@ textarea {
 .window-widget-m .window-main {
     width: var(--bitsy-size-xl);
     height: var(--bitsy-height-l);
-    padding-left: var(--bitsy-space-m);
-    padding-right: var(--bitsy-space-m);
+}
+
+pre {
+    padding-left: var(--bitsy-space-xl);
+    padding-right: var(--bitsy-space-xl);
 }
 
 .window-titlebar {
@@ -158,4 +140,34 @@ textarea {
 
 .bitsy-menu-label .txtadv_icon {
 	margin-right: var(--bitsy-space-s);
+}
+
+/* this is a one-off hack to better align the close button's icon with the help button's icon */
+.close-button .txtadv_icon {
+	transform: translateY(1px);
+}
+
+/* a hack to better align icon in text input */
+.txt_icon {
+	transform: translateY(2px);
+}
+
+/* icons */
+.icon {
+    width: 1em;
+    height: 1em;
+    /* filter processed in https://codepen.io/sosuke/pen/Pjoqqp for color --bitsy-color-main-2 */
+    filter: invert(45%) sepia(9%) saturate(2919%) hue-rotate(202deg) brightness(88%) contrast(83%);
+}
+
+.icon-help {
+    background-image: url(/assets/icons/help.svg);
+}
+
+.icon-close {
+    background-image: url(/assets/icons/close.svg);
+}
+
+.icon-prompt {
+    background-image: url(/assets/icons/next.svg);
 }

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ViewChild } from "@angular/core";
+import { ElementRef } from "@angular/core";
 
 @Component({
   selector: 'text-window',
@@ -6,5 +8,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./text-window.component.less']
 })
 export class TextWindowComponent {
+  @ViewChild("userInput", {static: false})
+  userInput!: ElementRef;
 
+  @ViewChild("consoleOutput", {static: false})
+  consoleOutput!: ElementRef;
+
+  on_enter_key_up(event: any) {
+    // TODO: send command to chatGPT
+    let consoleOutput = this.consoleOutput.nativeElement;
+    let userInput = this.userInput.nativeElement;
+    consoleOutput.innerText += "\n∷ " + userInput.value;
+    userInput.value = "";
+  }
+ 
+  on_input_change() {
+    
+  }
 }

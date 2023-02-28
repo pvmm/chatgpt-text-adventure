@@ -16,7 +16,10 @@
     </div>
 
     <div class="window-main">
-        <div id="chatgpt-response"><pre>Hello, world!<br/>Bla bla bla</pre></div>
-        <input title="user input" type="text" id="userInput" class="textInputField" onchange="on_drawing_name_change();">
+        <div id="chatgpt-response"><pre #consoleOutput>Hello, world!</pre></div>
+        <label title="prompt">
+            <span class="txt_icon icon icon-prompt"></span>
+        </label>
+        <input title="user input" type="text" #userInput class="textInputField" placeholder="type the next command" (keyup.enter)="on_enter_key_up($event)" (change)="on_input_change()" autofocus>
     </div>
 </div>
