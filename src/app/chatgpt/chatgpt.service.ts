@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ChatGPTAPI } from 'chatgpt'
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,10 +10,10 @@ export class ChatGPTService {
 
   // constructor(@Optional() @SkipSelf() gptService?: ChatGPTService) {
   constructor() {
-    // if (!process.env['OPENAI_API_KEY']) {
-    //   throw Error('API key not defined')
-    // }
-    // this.api = new ChatGPTAPI({ apiKey: process.env['OPENAI_API_KEY'] })
+    if (!environment['OPENAI_API_KEY']) {
+      throw Error('API key not defined');
+    }
+    this.api = new ChatGPTAPI({ apiKey: environment['OPENAI_API_KEY'] });
   }
 
   async sendMessage(message: string) {
