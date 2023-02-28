@@ -68,12 +68,15 @@ button:disabled {
 
 /* label */
 label {
-    font-family: "monocraft, medium";
     padding: var(--bitsy-space-s);
     margin: var(--bitsy-space-xs);
     border-radius: var(--bitsy-space-s);
     display: inline-flex;
     align-items: center;
+}
+
+pre {
+    font-family: "monocraft";
 }
 
 /* textarea */
@@ -128,21 +131,15 @@ textarea {
     filter: invert(45%) sepia(9%) saturate(2919%) hue-rotate(202deg) brightness(88%) contrast(83%);
 }
 
-// // bitsyEditorStyle.css
-// .icon svg {
-// 	width: 1em;
-// 	height: 1em;
-// 	fill: currentColor;
-// }
-
 .bitsy-card-xs .window-main {
     width: var(--bitsy-size-xs);
 }
 
 .window-widget-m .window-main {
     width: var(--bitsy-size-xl);
-    padding-left: 10px;
-    padding-right: 10px;
+    height: var(--bitsy-height-l);
+    padding-left: var(--bitsy-space-m);
+    padding-right: var(--bitsy-space-m);
 }
 
 .window-titlebar {
