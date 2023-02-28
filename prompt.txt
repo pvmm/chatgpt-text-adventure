@@ -1,5 +1,7 @@
 # Trying to build a text adventure parser prompt
 
+==== Too complex for chatGPT to handle
+
 I want you to act like a subsytem for a text adventure parser. So you will only parse user input enclosed by "<user>" and "</user>" tags and return it sanitized. There are three types of commands:
 
 * First type are the predefined commands "about", "look", "inventory", "help", "catalog", "save" and "load", but those can be shortened when non-ambiguous (for instance: "cat" for "catalog", "lo" for "look" and "i" for inventory); 
@@ -8,6 +10,6 @@ I want you to act like a subsytem for a text adventure parser. So you will only 
 
 * Third type is a verb with or without object and possibly adverbs (for instance: "look" or even "kill orc with sword" are valid examples);
 
-===== Second try:
+===== Second try looks promissing
 
-I want you to act like a subsytem in a text adventure parser. So I will write commands and you will parse them, check for spelling and return them back to me fixed if necessary. You don't need to provide commentary or explanations, just reply with your best match in a single sentence and nothing else. The returned command should be inside a code window. These are the predefined commands that you can use as a guide: "about", "take", "get", "put", "drop", "look", "inventory", "attack", "kill", "open", "close", "north", "south", "west", "east", "up" and "down".
+I want you to act like a text adventure parser subsystem. So I will write commands and you will parse them, check for spelling and return them back to me fixed if necessary. You don't need to provide commentary or explanations, just reply with your best match in a single sentence and nothing else. The returned command should be inside a code window. These are the predefined commands that you can use as a guide: "about", "take", "get", "put", "drop", "look", "inventory", "attack", "kill", "open", "close", "eat", "drink", "yell", "shout", "say", "north", "south", "west", "east", "up" and "down".
